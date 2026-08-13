@@ -91,6 +91,9 @@
         <li class="nav-item me-2">
             <button class="nav-link quiz-tab" id="tab-5" onclick="loadQuiz(5)">Quiz 5</button>
         </li>
+        <li class="nav-item me-2">
+            <button class="nav-link quiz-tab" id="tab-6" onclick="loadQuiz(6)">Quiz 6</button>
+        </li>
     </ul>
 
     <!-- Main Question Panel -->
@@ -462,6 +465,28 @@
             {"question": "Which of the following statements best describes a 'Zero-Day' vulnerability?", "options": {"A": "A vulnerability that has existed for exactly zero days before being resolved.", "B": "A previously unknown security flaw in software or hardware that has not yet been publicly disclosed or patched.", "C": "A vulnerability that only affects cloud-based applications.", "D": "A vulnerability caused specifically by a misconfigured firewall rule."}, "correct": "B"}, 
             {"question": "Which regulation or framework is primarily concerned with protecting the privacy and security of Payment Card Industry (PCI) data, such as credit card numbers?", "options": {"A": "HIPAA", "B": "GDPR", "C": "PCI-DSS", "D": "NIST 800-53"}, "correct": "C"}, 
             {"question": "A bank requires employees taking two weeks of consecutive time off to completely disconnect from the corporate network, allowing auditors to review their accounts for any unauthorized or fraudulent activity that might only be occurring while they are physically present. Which security principle does this enforce?", "options": {"A": "Separation of Duties", "B": "Mandatory Vacations", "C": "Job Rotation", "D": "Least Privilege"}, "correct": "B"}
+        ],
+        "set6": [
+            {"question": "A security analyst is reviewing firewall logs and notices a large amount of unencrypted traffic on port 23. Which insecure protocol is likely being used?", "options": {"A": "SSH", "B": "Telnet", "C": "FTP", "D": "SMTP"}, "correct": "B"}, 
+            {"question": "Which of the following ports is used by Secure Shell (SSH) to establish a secure, encrypted command-line connection to a remote server?", "options": {"A": "21", "B": "22", "C": "23", "D": "443"}, "correct": "B"}, 
+            {"question": "An organization wants to block all unencrypted web browsing traffic at the perimeter firewall. Which default port should the firewall administrator block?", "options": {"A": "53", "B": "80", "C": "443", "D": "3389"}, "correct": "B"}, 
+            {"question": "When securing e-commerce web traffic, an organization implements HTTPS. Which default port does HTTPS operate on?", "options": {"A": "80", "B": "443", "C": "8080", "D": "8443"}, "correct": "B"}, 
+            {"question": "The File Transfer Protocol (FTP) uses two well-known ports for its operations: one for control and one for data. Which two ports are these?", "options": {"A": "20 and 21", "B": "21 and 22", "C": "22 and 23", "D": "67 and 68"}, "correct": "A"}, 
+            {"question": "A network administrator needs to allow Domain Name System (DNS) queries through the firewall so internal users can resolve domain names to IP addresses. Which port must be opened?", "options": {"A": "25", "B": "53", "C": "67", "D": "161"}, "correct": "B"}, 
+            {"question": "Which port is primarily used by the Simple Mail Transfer Protocol (SMTP) to route emails between mail servers?", "options": {"A": "25", "B": "110", "C": "143", "D": "443"}, "correct": "A"}, 
+            {"question": "A remote worker needs to access their office computer's graphical desktop securely over a VPN. Which port does the Remote Desktop Protocol (RDP) use by default?", "options": {"A": "22", "B": "1433", "C": "3389", "D": "8080"}, "correct": "C"}, 
+            {"question": "Which of the following protocols operates on port 110 and is used by client applications to retrieve emails from a mail server?", "options": {"A": "SMTP", "B": "IMAP", "C": "SNMP", "D": "POP3"}, "correct": "D"}, 
+            {"question": "A network security team notices abnormal lateral movement on port 445. Which protocol commonly uses this port and is frequently targeted by ransomware like WannaCry?", "options": {"A": "SMB (Server Message Block)", "B": "RDP (Remote Desktop Protocol)", "C": "FTP (File Transfer Protocol)", "D": "LDAP (Lightweight Directory Access Protocol)"}, "correct": "A"}, 
+            {"question": "Which port is used by the Lightweight Directory Access Protocol (LDAP) for querying and modifying directory service providers like Active Directory in an unencrypted format?", "options": {"A": "161", "B": "389", "C": "445", "D": "636"}, "correct": "B"}, 
+            {"question": "An IT department is implementing LDAPS (LDAP over SSL/TLS) to ensure that authentication queries to the directory server are encrypted. Which port does LDAPS use?", "options": {"A": "389", "B": "443", "C": "636", "D": "3389"}, "correct": "C"}, 
+            {"question": "If a network administrator wants to monitor the health and performance of routers and switches using the Simple Network Management Protocol (SNMP), which port will primarily receive these queries?", "options": {"A": "69", "B": "123", "C": "161", "D": "389"}, "correct": "C"}, 
+            {"question": "Which port is associated with IMAP (Internet Message Access Protocol), a protocol that allows users to organize and manage emails directly on the server without downloading them locally?", "options": {"A": "25", "B": "110", "C": "143", "D": "443"}, "correct": "C"}, 
+            {"question": "The Dynamic Host Configuration Protocol (DHCP) assigns IP addresses automatically to devices joining a network. Which two ports are utilized by DHCP for client-server communication?", "options": {"A": "20 and 21", "B": "67 and 68", "C": "161 and 162", "D": "137 and 138"}, "correct": "B"}, 
+            {"question": "Trivial File Transfer Protocol (TFTP) is a simplified, unauthenticated version of FTP often used for booting computers over a network or updating router firmware. Which port does TFTP operate on?", "options": {"A": "21", "B": "69", "C": "161", "D": "3389"}, "correct": "B"}, 
+            {"question": "An administrator needs to securely transfer a configuration file to a remote Linux server. They decide to use SFTP (Secure FTP). Which underlying port will SFTP utilize to establish this secure connection?", "options": {"A": "20", "B": "21", "C": "22", "D": "443"}, "correct": "C"}, 
+            {"question": "The Network Time Protocol (NTP) is crucial for ensuring that security logs across different servers have synchronized timestamps. Which port does NTP use?", "options": {"A": "53", "B": "123", "C": "143", "D": "161"}, "correct": "B"},
+            {"question": "In a secure corporate environment, which of the following port transitions represents moving from an insecure protocol to a secure, encrypted alternative?", "options": {"A": "Moving from Port 443 to Port 80", "B": "Moving from Port 22 to Port 23", "C": "Moving from Port 80 to Port 443", "D": "Moving from Port 636 to Port 389"}, "correct": "C"},
+            {"question": "A security audit reveals that port 3389 is exposed directly to the public internet on a company server. What is the primary risk associated with this misconfiguration?", "options": {"A": "Attackers can query the DNS server and poison the cache", "B": "Attackers can intercept unencrypted web traffic", "C": "Attackers can perform brute-force attacks against the Remote Desktop interface", "D": "Attackers can send unauthenticated emails through the server"}, "correct": "C"}
         ]
     };
 
@@ -501,7 +526,7 @@
         let taskbar = document.getElementById('score-taskbar');
         taskbar.innerHTML = '';
         
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 1; i <= 6; i++) {
             if (scores[i]) {
                 let pct = Math.round((scores[i].score / scores[i].total) * 100);
                 let badgeClass = pct >= 70 ? 'passed' : 'failed';
@@ -546,7 +571,7 @@
     }
     
     function loadNextQuiz() {
-        let nextSet = currentQuiz === 5 ? 1 : currentQuiz + 1;
+        let nextSet = currentQuiz === 6 ? 1 : currentQuiz + 1;
         loadQuiz(nextSet);
         window.scrollTo(0,0);
     }
